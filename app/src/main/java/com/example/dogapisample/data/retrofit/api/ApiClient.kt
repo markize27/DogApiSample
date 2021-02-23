@@ -1,4 +1,4 @@
-package com.example.dogapisample.api
+package com.example.dogapisample.data.retrofit.api
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -8,9 +8,10 @@ import java.util.concurrent.TimeUnit
 
 
 const val BASEURL = "https://dog.ceo/"
+
 class ApiClient {
-    companion object{
-        private var retrofit: Retrofit?=null
+    companion object {
+        private var retrofit: Retrofit? = null
         fun getApiClient(): Retrofit {
             val gson = GsonBuilder()
                 .setLenient()
